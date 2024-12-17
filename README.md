@@ -1,22 +1,25 @@
+Ao clonar repositorio 
+- instalar npm
+  
+- para executar comando 'ng serve'
+  - em arquivo 'src/index.html'
+    -  substituir o conteudo da tag '<base href="https://RafaelAnanias.github.io/projeto_poo/">' por '<base href="/">'
+
+- requer angular 18
+
+- Participação do projeto para Programação Orientada a Objetos
+- Lucas Denner
+- Rafel Ananias
+
+- Pagina https://RafaelAnanias.github.io/projeto_poo/ em ajuste para executar a biblioteca em tempo de produção
+
 # ProjetoPoo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 18.2.12.
 
-## Development server
+## Servidor de desenvolvimento
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute `ng serve` para um servidor dev. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
 
 ## Running end-to-end tests
 
