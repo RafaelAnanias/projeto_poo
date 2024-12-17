@@ -1,26 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { GameListComponent } from './game-list/game-list.component';
-import { AddGameComponent } from './add-game/add-game.component';
-import { GameDetailsComponent } from './game-details/game-details.component';
+import { ListaJogosComponent } from './components/lista-jogos/lista-jogos.component';
+import { AdicionarJogoComponent } from './components/adicionar-jogo/adicionar-jogo.component';
+
+const routes: Routes = [ 
+  { path: 'jogos', component: ListaJogosComponent }, 
+  { path: 'adicionar-jogo', component: AdicionarJogoComponent }, 
+  { path: '', redirectTo: '/jogos', pathMatch: 'full' } 
+]; 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    GameListComponent,
-    AddGameComponent,
-    GameDetailsComponent
+    ListaJogosComponent,
+    AdicionarJogoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes), 
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [RouterModule]
 })
+
 export class AppModule { }

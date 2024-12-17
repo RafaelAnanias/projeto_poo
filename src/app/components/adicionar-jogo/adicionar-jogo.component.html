@@ -1,0 +1,29 @@
+<form (ngSubmit)="addJogo()">
+    <label for="titulo">Título:</label>
+    <input id="titulo" [(ngModel)]="titulo" name="titulo" required>
+    
+    <label for="anoPublicacao">Ano de Publicação:</label>
+    <input id="anoPublicacao" [(ngModel)]="anoPublicacao" name="anoPublicacao" required type="number">
+    
+    <label for="fabricante">Fabricante:</label>
+    <input id="fabricante" [(ngModel)]="fabricante" name="fabricante" required>
+    
+    <label for="jogoTipo">Tipo de Jogo:</label>
+    <select id="jogoTipo" [(ngModel)]="jogoTipo" name="jogoTipo" required>
+      <option value="tabuleiro">Jogo de Tabuleiro</option>
+      <option value="carta">Jogo de Carta</option>
+    </select>
+    
+    <div *ngIf="jogoTipo === 'tabuleiro'">
+      <label for="numeroJogadores">Número de Jogadores:</label>
+      <input id="numeroJogadores" [(ngModel)]="numeroJogadores" name="numeroJogadores" required type="number">
+    </div>
+    
+    <div *ngIf="jogoTipo === 'carta'">
+      <label for="idadeMinima">Idade Mínima:</label>
+      <input id="idadeMinima" [(ngModel)]="idadeMinima" name="idadeMinima" required type="number">
+    </div>
+    
+    <button type="submit">Adicionar Jogo</button>
+  </form>
+  

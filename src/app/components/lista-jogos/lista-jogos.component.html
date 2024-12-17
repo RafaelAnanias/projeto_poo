@@ -1,0 +1,7 @@
+<div *ngFor="let jogo of jogos">
+    <h2>{{ jogo.titulo }}</h2>
+    <p><strong>Fabricante:</strong> {{ jogo.fabricante }}</p>
+    <p><strong>Ano de Publicação:</strong> {{ jogo.anoPublicacao }}</p>
+    <button (click)="removerJogo(jogo.titulo)">Remover</button>
+</div>
+  
